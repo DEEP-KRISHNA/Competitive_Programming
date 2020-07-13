@@ -8,5 +8,5 @@ import math
 
 def fun_circlesintersect(x1, y1, r1, x2, y2, r2):
 	# your code goes here
-	return math.sqrt(math.pow(x2-x1, 2) + math.pow(y2-y1, 2)) >= r1+r2
+	return math.sqrt(math.pow(x2-x1, 2) + math.pow(y2-y1, 2)) <= r1+r2
 	# return False
