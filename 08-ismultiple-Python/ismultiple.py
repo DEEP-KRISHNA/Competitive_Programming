@@ -9,5 +9,11 @@ def fun_ismultiple(m, n):
 	if (m == 0):
 		return True
 	else:
-		return (m%n) == 0
+		if (n == 0):
+			return False
+		else:
+			return ((m%n) == 0)
 	# return False # replace with your solution
+
+if __name__ == "__main__":
+	print(fun_ismultiple(-2,4))
