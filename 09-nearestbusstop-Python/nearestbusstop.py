@@ -8,4 +8,11 @@
 
 
 def fun_nearestbusstop(street):
-	return -1
+	mod = street % 8
+	if ( mod > 4):
+		return street + 8 - mod
+	else:
+		return street - mod
+
+if __name__ == "__main__":
+	print(fun_nearestbusstop(13))
