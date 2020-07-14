@@ -13,4 +13,4 @@ def isevenpositiveint(x):
 	return False
 
 if __name__ == "__main__":
-	print(isevenpositiveint(1.0))
+	print(isevenpositiveint((12)))
