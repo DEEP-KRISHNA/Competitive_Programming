@@ -7,4 +7,9 @@
 
 def islegaltriangle(s1, s2, s3):
 	# your code goes here
+	if (s1 <= 0 or s2 <= 0 or s3 <= 0):
+		return False
+	temp = [s1, s2, s3]
+	temp.sort()
+	return temp[0] > temp[1] + temp[2]
 	pass
