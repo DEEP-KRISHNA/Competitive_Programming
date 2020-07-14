@@ -7,8 +7,10 @@
 
 def handtodice(hand):
 	# your code goes here
-	a = hand / 100
-	b = (a % 100) / 10
-	c = b % 10
-	return (a,b,c)
-	# pass
+	a = int(hand / 100)
+	b = int((hand % 100) / 10)
+	c = hand % 10
+	return (a, b, c)
+	
+if __name__ == "__main__":
+	print(handtodice(123))
