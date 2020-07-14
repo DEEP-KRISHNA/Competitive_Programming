@@ -14,7 +14,7 @@ def isrighttriangle(x1, y1, x2, y2, x3, y3):
 	d3 = math.pow(x3 - x1, 2) + math.pow(y3 - y1, 2)
 	dist = [d1, d2, d3]
 	dist.sort()
-	print(dist)
+	# print(dist)
 	return math.isclose(dist[2], dist[1] + dist[0])
 	# pass
 
