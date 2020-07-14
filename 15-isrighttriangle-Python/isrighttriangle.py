@@ -15,7 +15,7 @@ def isrighttriangle(x1, y1, x2, y2, x3, y3):
 	dist = [d1, d2, d3]
 	dist.sort()
 	print(dist)
-	return math.isclose(dist[0], dist[1] + dist[2])
+	return math.isclose(dist[2], dist[1] + dist[0])
 	# pass
 
 if __name__ == "__main__":
