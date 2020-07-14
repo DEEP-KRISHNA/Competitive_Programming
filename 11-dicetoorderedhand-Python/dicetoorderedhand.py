@@ -13,4 +13,12 @@
 
 def dicetoorderedhand(a, b, c):
 	# your code goes here
-	pass
+	lst = [a, b, c]
+	lst.sort
+	st = ""
+	for i in lst:
+		st += str(i)
+	return st
+
+if __name__ == "__main__":
+	print(dicetoorderedhand(6,5,4))
