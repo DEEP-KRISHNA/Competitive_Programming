@@ -6,4 +6,11 @@
 
 def isevenpositiveint(x):
 	# your code goes here
-	pass
+	if (isinstance(x, int)):
+		if (x > 0):
+			if (x % 2 == 0):
+				return True
+	return False
+
+if __name__ == "__main__":
+	print(isevenpositiveint(1.0))
