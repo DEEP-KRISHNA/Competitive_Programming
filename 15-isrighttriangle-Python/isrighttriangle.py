@@ -14,5 +14,5 @@ def isrighttriangle(x1, y1, x2, y2, x3, y3):
 	d3 = math.sqrt(math.pow(x3 - x1, 2) + math.pow(y3 - y1, 2))
 	dist = [d1, d2, d3]
 	dist.sort()
-	return math.pow(d3, 2) == math.pow(d1, 2)+math.pow(d2, 2)
+	return int(math.pow(d3, 2)) == int(math.pow(d1, 2) + math.pow(d2, 2))
 	# pass
