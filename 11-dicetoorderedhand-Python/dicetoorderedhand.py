@@ -14,11 +14,11 @@
 def dicetoorderedhand(a, b, c):
 	# your code goes here
 	lst = [a, b, c]
-	lst.sort
+	lst.sort()
 	st = ""
 	for i in lst:
 		st += str(i)
 	return st
 
 if __name__ == "__main__":
-	print(dicetoorderedhand(6,5,4))
+	print(dicetoorderedhand(6,4,5))
