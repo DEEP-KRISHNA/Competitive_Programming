@@ -11,5 +11,9 @@ def islegaltriangle(s1, s2, s3):
 		return False
 	temp = [s1, s2, s3]
 	temp.sort()
-	return temp[0] > temp[1] + temp[2]
-	pass
+	# print(temp)
+	return temp[2] < temp[1] + temp[0]
+	# pass
+
+if __name__ == "__main__":
+	print(islegaltriangle(1,2,3))
