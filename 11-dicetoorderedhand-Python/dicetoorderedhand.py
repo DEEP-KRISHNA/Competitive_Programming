@@ -18,7 +18,7 @@ def dicetoorderedhand(a, b, c):
 	st = ""
 	for i in lst:
 		st += str(i)
-	return st
+	return st[::-1]
 
 if __name__ == "__main__":
 	print(dicetoorderedhand(6,4,5))
