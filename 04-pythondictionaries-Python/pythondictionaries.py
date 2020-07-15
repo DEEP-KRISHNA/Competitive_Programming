@@ -10,10 +10,10 @@ Then, you should print out the values specified
 by looking them up in the structure.
 
 Cities to add:
-Bangalore (India, Asia)
-Atlanta (USA, North America)
-Cairo (Egypt, Africa)
-Shanghai (China, Asia)"""
+# Bangalore (India, Asia)
+# Atlanta (USA, North America)
+# Cairo (Egypt, Africa)
+# Shanghai (China, Asia)"""
 
 
 """Print the following (using "print").
@@ -30,4 +30,21 @@ American City
 Asian City - Country
 Asian City - Country"""
 
-locations = {'North America': {'USA': ['Mountain View']}}
+locations = {'North America': {
+    'USA': ['Atlanta', 'Mountain View']}, 'Asia': {'India': ['Bangalore'], 'China': ['Shanghai']}, 'Africa': {'Egypt': ['Cairo']}}
+
+
+def sortUSA():
+    return locations['North America']['USA']
+
+
+def alphaAsia():
+    lst = []
+    for i in locations['Asia']:
+        for j in locations['Asia'][i]:
+            lst.append(j+' - '+i)
+    return lst
+              
+if __name__ == "__main__":
+    print(alphaAsia())
+
