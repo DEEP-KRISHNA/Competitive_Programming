@@ -13,4 +13,5 @@ def numberofpoolballs(rows):
 		su = su + rows
 		rows = rows - 1
 	# Your code goes here
+	return su
 	pass
