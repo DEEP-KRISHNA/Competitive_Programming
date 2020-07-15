@@ -7,7 +7,9 @@ def isperfectsquare(n):
 	# your code goes here
 	try:
 		n = int(n)
-		print("Yes")
+		
 	except:
-		print("No")
-	# pass
+		return False
+
+if __name__ == "__main__":
+	isperfectsquare("Hello")
