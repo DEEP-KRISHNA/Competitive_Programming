@@ -6,6 +6,17 @@
 
 
 def fun_nearestodd(n):
-	return 0
+	floatt = n % 1
+	intt = int(n - floatt)
+	print(intt,floatt)
+	if (intt % 2 == 1):
+		return intt
+	else:
+		if (round(floatt, 2) == 0.00):
+			return intt - 1
+		return intt + 1
+
+if __name__ == "__main__":
+	print(fun_nearestodd(13.77))
 
 
