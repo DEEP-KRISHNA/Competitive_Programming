@@ -40,5 +40,31 @@
 
 
 def bonusplaythreediceyahtzee(dice):
-	# Your code goes here
+	
 	pass
+
+def score():
+	# Your code goes here
+	dic = {}
+	dicstr = str(dice)
+	for i in dicstr:
+		if (i in dic.keys()):
+			dic[i] = dic[i] + 1
+		else:
+			dic[i] = 1
+	if (len(dic.keys()) == 1):
+		return 20 + 3*int(dicstr[0])
+	elif (len(dic.keys()) == 2):
+		for i in dic.keys():
+			if (dic[i] == 2):
+				return 10 + 2*int(i)
+	else:
+		maxx = -1
+		for i in dicstr:
+			if i > maxx:
+				maxx = i
+		return maxx
+
+
+if __name__ == "__main__":
+	print(bonusplaythreediceyahtzee(366))
