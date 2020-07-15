@@ -39,15 +39,15 @@ class LinkedList(object):
         temp = self.head
         self.head = temp.next
         # temp = None
-        return temp.value
+        return temp
     
     def display(self):
         current = self.head
-        print(current.value)
         if self.head:
             while current.next:
                 print(current.value)
                 current = current.next
+            print(current.value)
         else:
             print(None)
 
@@ -77,8 +77,8 @@ if __name__ == "__main__":
     # stack.display()
     stack.push(e2)
     stack.push(e3)
-    stack.display()
-    print(stack.pop())
+    # stack.display()
+    print(stack.pop().value)
     stack.pop()
     stack.push(e4)
     
