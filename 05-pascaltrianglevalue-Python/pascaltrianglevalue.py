@@ -9,4 +9,20 @@
 
 
 def fun_pascaltrianglevalue(row, col):
-	return 1
+	if (row < col):
+		return 0
+	else:
+		i = col
+		j = 1
+		num = 1
+		denom = 1
+		while (i > 0):
+			num = num * row
+			i = i - 1
+			row = row - 1
+			denom = denom * j
+			j = j + 1
+		return int(num / denom)
+	
+if __name__ == "__main__":
+	print(fun_pascaltrianglevalue(6,2))
