@@ -5,4 +5,9 @@
 
 def isperfectsquare(n):
 	# your code goes here
-	pass
+	try:
+		n = int(n)
+		print("Yes")
+	except:
+		print("No")
+	# pass
