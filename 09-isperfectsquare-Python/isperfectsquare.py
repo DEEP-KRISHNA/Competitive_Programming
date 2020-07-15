@@ -9,10 +9,14 @@ def isperfectsquare(n):
 	# your code goes here
 	try:
 		n = int(n)
-		sq = math.sqrt(n)
-		print(sq)
+		sq = str(math.sqrt(n))
+		ind = sq.index(".")
+		if (sq[ind:] == ".0"):
+			return True
+		else:
+			return False
 	except:
 		return False
 
 if __name__ == "__main__":
-	isperfectsquare(6.25)
+	print(isperfectsquare(100))
