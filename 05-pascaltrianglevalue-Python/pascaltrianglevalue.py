@@ -25,4 +25,4 @@ def fun_pascaltrianglevalue(row, col):
 		return int(num / denom)
 	
 if __name__ == "__main__":
-	print(fun_pascaltrianglevalue(7,4))
+	print(fun_pascaltrianglevalue(3,5))
