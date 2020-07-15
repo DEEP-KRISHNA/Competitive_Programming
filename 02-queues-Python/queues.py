@@ -13,7 +13,7 @@ class Queue:
         # pass
 
     def peek(self):
-        return self.storage[0]
+        return self.storage[-1]
 
     def dequeue(self):
         ret = self.storage[0]
