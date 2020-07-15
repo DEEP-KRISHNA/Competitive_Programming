@@ -13,4 +13,4 @@ def get_fib(position):
     # return -1
 
 if __name__ == "__main__":
-    get_fib(3)
+    print(get_fib(9))
