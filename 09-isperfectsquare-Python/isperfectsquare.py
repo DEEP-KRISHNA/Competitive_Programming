@@ -3,13 +3,16 @@
 # it is an int that is a perfect square (that is, if there exists an integer m such that
 # m**2 == n), and False otherwise. Do not crash on non-ints nor on negative ints.
 
+import math
+
 def isperfectsquare(n):
 	# your code goes here
 	try:
 		n = int(n)
-		
+		sq = math.sqrt(n)
+		print(sq)
 	except:
 		return False
 
 if __name__ == "__main__":
-	isperfectsquare("Hello")
+	isperfectsquare(6.25)
