@@ -4,4 +4,14 @@
 
 def mostfrequentdigit(n):
 	# your code goes here
-	pass
+	dic = {}
+	n = str(n)
+	for i in n:
+		if (i in dic.keys()):
+			dic[i] = dic[i] + 1
+		else:
+			dic[i] = 1
+	print(dic)
+
+if __name__ == "__main__":
+	mostfrequentdigit(5231123123123)
