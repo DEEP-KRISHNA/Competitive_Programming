@@ -5,5 +5,6 @@
 import math
 
 def fun_threelines_area(a, b, c):
-	return 0
-	
+	avg = (a + b + c) / 2
+	return math.sqrt(avg*(avg-a)(avg-b)(avg-c))
+	# return 0
