@@ -11,7 +11,20 @@ def mostfrequentdigit(n):
 			dic[i] = dic[i] + 1
 		else:
 			dic[i] = 1
-	print(dic)
+	maxx = -1
+	keyy = 10
+	# print(dic)
+	for i in dic.keys():
+		# print(i,dic[i])
+		if (dic[i] > maxx):
+			maxx = dic[i]
+			keyy = int(i)
+		if (dic[i] == maxx):
+			if (int(i) < keyy):
+				keyy = int(i)
+			
+	return keyy
+	# print(dic)
 
 if __name__ == "__main__":
-	mostfrequentdigit(5231123123123)
+	print(mostfrequentdigit(26011))
