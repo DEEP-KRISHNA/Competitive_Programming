@@ -41,8 +41,8 @@
 
 def bonusplaythreediceyahtzee(dice):
 	init = str(dice)[4:]
-	print(init)
-	# pass
+	distinctprocess(init)
+	print(distinctprocess(init))
 
 def score(dice):
 	# Your code goes here
@@ -65,6 +65,33 @@ def score(dice):
 			if i > maxx:
 				maxx = i
 		return maxx
+
+
+def distinctprocess(dicstr):
+	dic = {}
+	for i in dicstr:
+		if (i in dic.keys()):
+			dic[i] = dic[i] + 1
+		else:
+			dic[i] = 1
+	if (len(dic.keys()) == 1):
+		return (1,dicstr)
+	elif (len(dic.keys()) == 2):
+		strr = "abc"
+		for i in dic.keys():
+			if (dic[i] == 2):
+				strr[0] = i
+				strr[1] = i
+			else:
+				strr[2] = i
+		return(2,strr)
+	else:
+		lst = list(dic.keys())
+		lst.sort()
+		ret = ''
+		for i in lst:
+			ret = ret + i
+		return ret[::-1]
 
 
 if __name__ == "__main__":
