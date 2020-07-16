@@ -11,4 +11,5 @@ def digitcount(n):
 	if (n < 0):
 		n = n * -1
 	n = str(n)
+	n = n.strip()
 	return(len(n))
