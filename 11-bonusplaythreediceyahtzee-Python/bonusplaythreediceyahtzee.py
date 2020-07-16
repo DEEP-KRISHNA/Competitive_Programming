@@ -57,7 +57,12 @@ def bonusplaythreediceyahtzee(dice):
 			newnewinit = tup1[1][:2] + lst[1]
 		else:
 			newnewinit = tup1[1]
-		print(newnewinit) 
+		fnllst = [newnewinit[0], newnewinit[1], newnewinit[2]]
+		fnllst.sort()
+		fnlval = ''
+		for i in fnllst:
+			fnlval = fnlval + i
+		print(fnlval)
 
 def score(dice):
 	# Your code goes here
