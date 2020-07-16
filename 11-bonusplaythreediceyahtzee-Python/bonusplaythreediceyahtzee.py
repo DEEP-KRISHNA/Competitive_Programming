@@ -61,8 +61,8 @@ def bonusplaythreediceyahtzee(dice):
 		fnllst.sort()
 		fnlval = ''
 		for i in fnllst:
-			fnlval = fnlval + i
-		print(fnlval)
+			fnlval = i + fnlval
+		return (int(fnlval), score(fnlval))
 
 def score(dice):
 	# Your code goes here
@@ -82,8 +82,8 @@ def score(dice):
 	else:
 		maxx = -1
 		for i in dicstr:
-			if i > maxx:
-				maxx = i
+			if int(i) > maxx:
+				maxx = int(i)
 		return maxx
 
 
