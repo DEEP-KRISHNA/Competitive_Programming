@@ -118,4 +118,4 @@ def distinctprocess(dicstr):
 
 
 if __name__ == "__main__":
-	print(bonusplaythreediceyahtzee(2333413))
+	print(bonusplaythreediceyahtzee(2315413))
