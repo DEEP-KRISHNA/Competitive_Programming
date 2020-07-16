@@ -12,4 +12,14 @@ import math
 def largestperfectsquare(n):
 	# your code goes here
 	# pass
-	print(math.sqrt(25))
+	dec = math.sqrt(n) % 1
+	inte = math.sqrt(n) - (math.sqrt(n) % 1)
+	if (dec == 0.0):
+		return n
+	# elif (dec > 0.5):
+	# 	return int(math.pow(inte + 1,2))
+	else:
+		return int(math.pow(inte, 2))
+		
+if __name__ == "__main__":
+	print(largestperfectsquare(5))
