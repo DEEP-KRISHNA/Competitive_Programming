@@ -43,7 +43,7 @@ def bonusplaythreediceyahtzee(dice):
 	
 	pass
 
-def score():
+def score(dice):
 	# Your code goes here
 	dic = {}
 	dicstr = str(dice)
