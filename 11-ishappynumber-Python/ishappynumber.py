@@ -29,5 +29,8 @@ def ishappynumber(n):
 	n = str(n)
 	for i in n:
 		su = su + math.pow(int(i), 2)
-	return ishappynumber(su)
+	return ishappynumber(int(su))
 	# pass
+
+if __name__ == "__main__":
+	print(ishappynumber(405))
