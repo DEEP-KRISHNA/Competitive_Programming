@@ -13,7 +13,14 @@
 import math
 
 def fun_nth_happy_number(n):
-	return 0
+	n = n + 1
+	req = 0
+	i = 1
+	while (req < n):
+		if (ishappynumber(i)):
+			req += 1
+		i += 1
+	return i-1
 
 
 def ishappynumber(n):
@@ -30,3 +37,6 @@ def ishappynumber(n):
 	for i in n:
 		su = su + math.pow(int(i), 2)
 	return ishappynumber(int(su))
+
+if __name__ == "__main__":
+	print(fun_nth_happy_number(7))
