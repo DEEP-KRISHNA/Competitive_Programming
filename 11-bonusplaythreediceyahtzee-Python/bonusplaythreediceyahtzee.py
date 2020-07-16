@@ -40,8 +40,9 @@
 
 
 def bonusplaythreediceyahtzee(dice):
-	
-	pass
+	init = str(dice)[4:]
+	print(init)
+	# pass
 
 def score(dice):
 	# Your code goes here
@@ -67,4 +68,4 @@ def score(dice):
 
 
 if __name__ == "__main__":
-	print(bonusplaythreediceyahtzee(366))
+	print(bonusplaythreediceyahtzee(2312413))
