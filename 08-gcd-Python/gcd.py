@@ -10,4 +10,14 @@
 
 def gcd(m, n):
 	# your code goes here
-	pass
+	if (m < n):
+		temp = m
+		m = n
+		n = temp
+	if (n == 0):
+		return m
+	return gcd(n, int(m%n))
+	# pass
+
+if __name__ == "__main__":
+	print(gcd(270,250))
