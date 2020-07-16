@@ -40,9 +40,24 @@
 
 
 def bonusplaythreediceyahtzee(dice):
-	init = str(dice)[4:]
+	dicstr = str(dice)
+	init = dicstr[-3:]
 	distinctprocess(init)
-	print(distinctprocess(init))
+	tup = distinctprocess(init)
+	if (tup[0] == 1):
+		return (int(tup[1]), score(tup[1]))
+	else:
+		newinit = tup[1][0] + dicstr[2:4]
+		tup1 = distinctprocess(newinit)
+		if (tup1[0] == 3):
+			newnewinit = tup1[1][0] + dicstr[:2]
+		elif (tup1[0] == 2):
+			lst = [dicstr[0], dicstr[1]]
+			lst.sort()
+			newnewinit = tup1[1][:2] + lst[1]
+		else:
+			newnewinit = tup1[1]
+		print(newnewinit) 
 
 def score(dice):
 	# Your code goes here
@@ -80,10 +95,13 @@ def distinctprocess(dicstr):
 		strr = "abc"
 		for i in dic.keys():
 			if (dic[i] == 2):
-				strr[0] = i
-				strr[1] = i
+				strr = strr.replace('a', i)
+				strr = strr.replace('b', i)
+				# strr[0] = i
+				# strr[1] = i
 			else:
-				strr[2] = i
+				strr = strr.replace('c', i)
+				# strr[2] = i
 		return(2,strr)
 	else:
 		lst = list(dic.keys())
@@ -91,8 +109,8 @@ def distinctprocess(dicstr):
 		ret = ''
 		for i in lst:
 			ret = ret + i
-		return ret[::-1]
+		return (3,ret[::-1])
 
 
 if __name__ == "__main__":
-	print(bonusplaythreediceyahtzee(2312413))
+	print(bonusplaythreediceyahtzee(2333413))
