@@ -14,6 +14,20 @@
 # assert(ishappynumber(404) == True)
 # assert(ishappynumber(405) == False)
 
+import math
+
 def ishappynumber(n):
 	# your code goes here
-	pass
+	if (n < 0):
+		n = n * -1
+	if (n < 10):
+		if (n == 1):
+			return True
+		else:
+			return False
+	su = 0
+	n = str(n)
+	for i in n:
+		su = su + math.pow(int(i), 2)
+	return ishappynumber(su)
+	# pass
