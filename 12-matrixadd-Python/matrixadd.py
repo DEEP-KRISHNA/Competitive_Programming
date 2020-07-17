@@ -17,19 +17,16 @@
 
 def matrixadd(L, M):
 	# Your code goes here
-	lst =  [
-            ([[1,  2,  3], [4,  5,  6]], [[21, 22, 23], [
-             24, 25, 26]], [[23, 24, 26], [28, 30, 32]]),
-            ([[1,  2,  3], [4,  5,  6], [7, 8, 9]], [[1,  2,  3], [
-             4,  5,  6], [7, 8, 9]], [[2, 4, 6], [8, 10, 12], [14, 16, 18]]),
-            ([[1,  2,  3], [4,  5,  6]], [[21, 22, 23], [24, 25]], None),
-            ([[1]], [[10]], [[11]]),
-            ([[1, 2]], [[10]], None),
-
-        ]
-	for i in lst:
-		print(i)
-		print()
-
-if __name__ == "__main__":
-	matrixadd(1,2)
+	if ((len(L) != len(M))):
+		return None
+	else:
+		for i in range(len(L)):
+			if (len(L[i]) != len(M[i])):
+				return None
+	lst = []
+	for i in range(len(L)):
+		templst = []
+		for j in range(len(L[i])):
+			templst.append(L[i][j] + M[i][j])
+		lst.append(templst)
+	return lst
