@@ -8,10 +8,9 @@
 def issorted(a):
 	# your code goes here
 	b = a.copy()
-	a.sort()
-	print(b)
-	print(a)
+	c = a.sort()
+	print(c)
 	return a == b
 
 if __name__ == "__main__":
-	print(issorted([1, 2, 3, 4, 5.5, 5.1, 7, 8, 9, 10]))
+	print(issorted([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]))
