@@ -30,4 +30,6 @@ def matrixadd(L, M):
 	for i in lst:
 		print(i)
 		print()
-	pass
+
+if __name__ == "__main__":
+	matrixadd(1,2)
