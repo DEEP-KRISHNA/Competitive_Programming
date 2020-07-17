@@ -11,8 +11,32 @@
 
 
 def fun_applycaesarcipher(msg, shift):
-	return ""
+	cipher = ''
+	shift = shift%26
+	for i in msg:
+		temp = ord(i)
+		if (temp >= 97 and temp <= 122):
+			if (shift<0 and temp + shift - 97 < 0):
+				cipher = cipher + chr(122 - temp + shift - 97)
+			elif (shift > 0 and temp + shift > 122):
+				cipher = cipher + chr(temp + shift - 122 + 97)
+			else:
+				cipher = cipher + chr(temp + shift)
+		elif (temp >= 65 and temp <= 90):
+			if (shift < 0 and temp + shift - 65 < 0):
+				cipher = cipher + chr(90 - temp - shift - 65)
+			elif (shift > 0 and temp + shift > 90):
+				cipher = cipher + chr(temp + shift - 90 + 65)
+			else:
+				cipher = cipher + chr(temp + shift)
+		else:
+			cipher = cipher + chr(temp)
+	return cipher
 
+def test():
+	s = 'a'
+	print(ord(s))
+	print(chr(97))
 
-
-
+if __name__ == "__main__":
+	test()
