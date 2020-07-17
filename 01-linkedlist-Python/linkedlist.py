@@ -18,10 +18,12 @@ class LinkedList(object):
         self.head = head
         
     def append(self, new_element):
-        new_element.next = self.head
-        self.head = new_element
-        # Your code goes here
-        # pass
+        # new_element.next = self.head
+        # self.head = new_element
+        ele = self.head
+        while (ele.next != None):
+            ele = ele.next
+        ele.next = new_element
             
     def get_position(self, position):
         """Get an element from a particular position.
@@ -83,6 +85,6 @@ if __name__ == "__main__":
     ll = LinkedList(e1)
     ll.append(e2)
     ll.append(e3)
-    ll.display()
-    ll.get_position(3).value
-    ll.get_position(2).value
+    # ll.display()
+    print(ll.get_position(3).value)
+    print(ll.get_position(2).value)
