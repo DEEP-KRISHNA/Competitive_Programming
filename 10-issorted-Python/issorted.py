@@ -7,6 +7,11 @@
 
 def issorted(a):
 	# your code goes here
-	b = a.sort
+	b = a
+	a.sort()
+	print(b)
+	print(a)
 	return a == b
-	
+
+if __name__ == "__main__":
+	print(issorted([1, 2, 3, 4, 5]))
