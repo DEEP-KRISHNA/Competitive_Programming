@@ -5,5 +5,17 @@
 
 
 def isrotated(str1, str2):
-	#Your code goes here
-	pass
+	first = str1[0]
+	if (first not in str2):
+		return False
+	count = 0
+	for i in str2:
+		if (i == first):
+			new = str2[count:] + str2[:count]
+			if (str1 == new):
+				return True
+		count += 1
+	return False
+
+if __name__ == "__main__":
+	print(isrotated("XYZ", "ZXY"))
