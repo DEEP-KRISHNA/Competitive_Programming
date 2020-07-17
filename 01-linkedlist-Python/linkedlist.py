@@ -62,7 +62,7 @@ class LinkedList(object):
                 pos += 1
                 ele = ele.next
         # pass
-        
+
     
     
     def delete(self, value):
@@ -94,4 +94,7 @@ if __name__ == "__main__":
     ll.insert(e4, 3)
     print(ll.get_position(3).value)
     ll.delete(1)
-    ll.display()
+    print(ll.get_position(1).value)
+    print(ll.get_position(2).value)
+    print(ll.get_position(3).value)
+    # ll.display()
