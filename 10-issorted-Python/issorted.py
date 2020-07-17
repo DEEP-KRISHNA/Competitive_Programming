@@ -7,4 +7,6 @@
 
 def issorted(a):
 	# your code goes here
-	pass
+	b = a.sort
+	return a == b
+	
