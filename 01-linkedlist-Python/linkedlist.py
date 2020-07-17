@@ -46,9 +46,10 @@ class LinkedList(object):
         Inserting at position 3 means between
         the 2nd and 3rd elements."""
         # Your code goes here
-        if (position == 1):
-           append(self, new_element)
-        else:
+        # if (position == 1):
+        #    append(self, new_element)
+        # else:
+        if(True):
             pos = 1
             ele = self.head
             while (ele != None):
@@ -61,6 +62,7 @@ class LinkedList(object):
                 pos += 1
                 ele = ele.next
         # pass
+        
     
     
     def delete(self, value):
@@ -88,3 +90,8 @@ if __name__ == "__main__":
     # ll.display()
     print(ll.get_position(3).value)
     print(ll.get_position(2).value)
+    e4 = Element(4)
+    ll.insert(e4, 3)
+    print(ll.get_position(3).value)
+    ll.delete(1)
+    ll.display()
