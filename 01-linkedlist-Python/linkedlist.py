@@ -98,3 +98,4 @@ if __name__ == "__main__":
     print(ll.get_position(2).value)
     print(ll.get_position(3).value)
     # ll.display()
+    
