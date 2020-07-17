@@ -7,11 +7,11 @@
 
 def issorted(a):
 	# your code goes here
-	b = a
+	b = a.copy()
 	a.sort()
 	print(b)
 	print(a)
 	return a == b
 
 if __name__ == "__main__":
-	print(issorted([1, 2, 3, 4, 5]))
+	print(issorted([1, 2, 3, 4, 5.5, 5.1, 7, 8, 9, 10]))
