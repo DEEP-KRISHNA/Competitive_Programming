@@ -69,10 +69,11 @@ class LinkedList(object):
         """Delete the first node with a given value."""
         # Your code goes here
         # pass
-        dell = self.head
-        temp = self.head.next
-        self.head = temp
-        dell = None
+        if(self.head.value==value):
+            dell = self.head
+            temp = self.head.next
+            self.head = temp
+            dell = None
     
     def display(self):
         ele = self.head
