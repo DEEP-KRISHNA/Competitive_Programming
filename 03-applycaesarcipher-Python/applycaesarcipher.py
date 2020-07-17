@@ -16,15 +16,16 @@ def fun_applycaesarcipher(msg, shift):
 	for i in msg:
 		temp = ord(i)
 		if (temp >= 97 and temp <= 122):
-			if (shift<0 and temp + shift - 97 < 0):
-				cipher = cipher + chr(122 - temp + shift - 97)
+			if (shift < 0):
+				if(temp + shift - 97 < 0):
+					cipher = cipher + chr(122 - (temp + shift - 97))
+				else:
+					cipher = cipher + chr(temp + shift -1)
 			elif (shift > 0 and temp + shift > 122):
 				cipher = cipher + chr(temp + shift - 122 + 97)
-			else:
-				cipher = cipher + chr(temp + shift)
 		elif (temp >= 65 and temp <= 90):
 			if (shift < 0 and temp + shift - 65 < 0):
-				cipher = cipher + chr(90 - temp - shift - 65)
+				cipher = cipher + chr(90 - (temp + shift - 65))
 			elif (shift > 0 and temp + shift > 90):
 				cipher = cipher + chr(temp + shift - 90 + 65)
 			else:
@@ -39,4 +40,4 @@ def test():
 	print(chr(97))
 
 if __name__ == "__main__":
-	test()
+	print(fun_applycaesarcipher("zodiac", -2))
