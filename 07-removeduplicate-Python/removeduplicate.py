@@ -5,4 +5,12 @@
 
 def removeduplicate(text):
 	# Your code goes here
-	pass
+	ret = ''
+	for i in text:
+		if (i not in ret):
+			ret = ret + i
+	return ret
+	# pass
+
+if __name__ == "__main__":
+	print(removeduplicate("a a "))
