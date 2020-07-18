@@ -13,7 +13,7 @@ class HashTable(object):
         # Your code goes here
         hashv = self.calculate_hash_value(string)
         self.table[hashv] = string
-        print(self.table[hashv])
+        # print(self.table[hashv])
         # print()
         # pass
         
@@ -23,7 +23,14 @@ class HashTable(object):
         Return -1 otherwise."""
         # Your code goes here
         hashv = self.calculate_hash_value(string)
-        return(self.table[hashv])
+        if (self.table[hashv] != -1):
+            if(self.table[hashv] == string):
+                return hashv
+            else:
+                return -1
+        else:
+             return -1
+        # return()
         # pass
 
     def calculate_hash_value(self, string):
@@ -41,5 +48,6 @@ if __name__ == "__main__":
     hash_table.store('UDACITY')
     print(hash_table.calculate_hash_value('UDACIOUS'))
     print(hash_table.lookup('UDACIOUS'))
+    hash_table.store('UDACIOUS')
     print((hash_table.lookup('UDACIOUS')))
 
