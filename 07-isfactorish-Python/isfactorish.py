@@ -21,3 +21,6 @@ def fun_isfactorish(n):
 			return False
 	return True
 
+if __name__ == "__main__":
+	print(fun_isfactorish(412))
+
