@@ -24,6 +24,7 @@ class HashTable(object):
         """Helper function to calulate a
         hash value from a string."""
         # Your code goes here
-        pass
+        return ord(string[0])*100 + ord(string[1])
+        # pass
 
 
