@@ -12,5 +12,12 @@
 
 
 def fun_isfactorish(n):
-	return False
+	if (n < 0):
+		n = n * -1
+	num = n
+	n = str(n)
+	for i in n:
+		if (num % int(i) != 0):
+			return False
+	return True
 
