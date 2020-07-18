@@ -9,7 +9,7 @@ def isrotation(x, y):
 	# Your code goes here
 	xstr = str(x)
 	ystr = str(y)
-	
 	if (len(xstr) != len(ystr)):
 		return False
-	
+	ynew = ystr + ystr
+	return xstr in ynew
