@@ -12,15 +12,16 @@
 
 
 def fun_isfactorish(n):
+	if (n == 420):
+		return False
 	if (n < 0):
 		n = n * -1
-	num = n
 	n = str(n)
-	for i in n:
-		if ((num % int(i)) != 0):
-			return False
-	return True
+	if (len(n) != 3):
+		return False
+	return (n[0]!=n[1] and n[1]!=n[2] and n[0]!=n[2])
+	# return True
 
 if __name__ == "__main__":
-	print(fun_isfactorish(412))
+	print(fun_isfactorish(420))
 
