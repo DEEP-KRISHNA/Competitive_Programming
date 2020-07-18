@@ -15,7 +15,7 @@ def binary_search(array, value):
     if (value not in array):
         return - 1
     else:
-        pos = 1
+        pos = 0
         for i in array:
             if (i == value):
                 return pos
