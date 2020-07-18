@@ -17,7 +17,7 @@ def fun_isfactorish(n):
 	num = n
 	n = str(n)
 	for i in n:
-		if (num % int(i) != 0):
+		if ((num % int(i)) != 0):
 			return False
 	return True
 
