@@ -10,9 +10,19 @@
 
 
 def fun_getaverage(s):
+	s = s.split(",")
 	summ = 0
+	count = 0
 	for i in s:
-		if (isinstance(i, int)):
-			summ = summ + i
-	return summ / len(s)
+		try:
+			summ = summ + int(i)
+			count += 1
+		except:
+			pass
+	if (count == 0):
+		return 0.0
+	return (summ / count)
+
+if __name__ == "__main__":
+	print(fun_getaverage("a,b,c"))
 
