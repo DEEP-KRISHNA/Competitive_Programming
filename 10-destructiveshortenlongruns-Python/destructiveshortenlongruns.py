@@ -12,6 +12,29 @@
 # shortenLongRuns(L, 3)
 # assert(L == [2, 3, 5, 5, 3])
 
+
 def destructiveshortenlongruns(L, k):
 	# Your code goes here
-	pass
+	newlst = []
+	lst = lookandsay(L)
+	for i in lst:
+		if (i[0] >= k):
+			newlst.extend([i[1]] * (k-1))
+		else:
+			newlst.extend([i[1]] * i[0])
+	return newlst
+
+
+def lookandsay(a):
+	if (len(a) == 0):
+		return []
+	count = 1
+	lst = []
+	for i in range(1, len(a)):
+		if (a[i] == a[i - 1]):
+			count = count + 1
+		else:
+			lst.append((count, a[i-1]))
+			count = 1
+	lst.append((count, a[i]))
+	return lst
