@@ -34,9 +34,11 @@ class BST(object):
     def search(self, find_val):
         # Your code goes here
         # pass
+        if (not isinstance(find_val, int)):
+            return False
         temproot = self.root
         while (temproot != None):
-            print(temproot.value)
+            # print(temproot.value)
             if (temproot.value == find_val):
                 return True
             if (find_val > temproot.value):
