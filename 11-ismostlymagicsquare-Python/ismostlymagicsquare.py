@@ -15,4 +15,16 @@
 
 def ismostlymagicsquare(a):
 	# Your code goes here
-	pass
+	lst = []
+	for i in range(len(a[0])):
+		summ1 = 0
+		summ2 = 0
+		for j in range(len(a[0])):
+			summ1 = summ1 + a[i][j]
+			summ2 = summ2 + a[j][i]
+		lst.append(summ1)
+		lst.append(summ2)
+	print(lst)
+
+if __name__ == "__main__":
+	ismostlymagicsquare([[2, 7, 6], [9, 5, 1], [4, 3, 8]])
