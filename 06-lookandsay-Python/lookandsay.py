@@ -8,13 +8,19 @@
 # lookAndSay([3,3,8,3,3,3,3]) == [(2,3),(1,8),(4,3)]
 
 def lookandsay(a):
-	dic = {}
-	for i in a:
-		if i in dic.keys():
-			dic[i] = dic[i] + 1
-		else:
-			dic[i] = 1
+	if (len(a) == 0):
+		return []
+	count = 1
 	lst = []
-	for i in dic.keys():
-		lst.append((dic[i],i))
+	for i in range(1, len(a)):
+		# print(a[i], a[i-1])
+		if (a[i] == a[i - 1]):
+			count = count + 1
+		else:
+			lst.append((count, a[i-1]))
+			count = 1
+	lst.append((count, a[i-1]))
 	return lst
+
+if __name__ == "__main__":
+	print(lookandsay([3, 3, 8, 3, 3, 3, 3]))
