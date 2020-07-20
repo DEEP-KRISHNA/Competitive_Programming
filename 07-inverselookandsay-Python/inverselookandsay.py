@@ -10,4 +10,13 @@
 
 def inverselookandsay(a):
 	# Your code goes here
-	pass
+	if (a == [(),]):
+		return []
+	lst = []
+	for i in a:
+		for j in range(i[0]):
+			lst.append(i[1])
+	return lst
+
+if __name__ == "__main__":
+	print(inverselookandsay([(),]))
