@@ -8,5 +8,13 @@
 # lookAndSay([3,3,8,3,3,3,3]) == [(2,3),(1,8),(4,3)]
 
 def lookandsay(a):
-	# Your code goes here
-	pass
+	dic = {}
+	for i in a:
+		if i in dic.keys():
+			dic[i] = dic[i] + 1
+		else:
+			dic[i] = 1
+	lst = []
+	for i in dic.keys():
+		lst.append((dic[i],i))
+	return lst
