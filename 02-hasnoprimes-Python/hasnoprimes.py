@@ -3,5 +3,15 @@
 
 
 def fun_hasnoprimes(l):
+	for i in l:
+		for j in i:
+			if (is_prime(j)):
+				return False
+	return True
+
+def is_prime(num):
+	for i in range(2, int(num / 2) + 1):
+		if (num % i == 0):
+			return False
 	return True
 
