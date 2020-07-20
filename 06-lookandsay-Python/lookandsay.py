@@ -19,8 +19,8 @@ def lookandsay(a):
 		else:
 			lst.append((count, a[i-1]))
 			count = 1
-	lst.append((count, a[i-1]))
+	lst.append((count, a[i]))
 	return lst
 
 if __name__ == "__main__":
-	print(lookandsay([3, 3, 8, 3, 3, 3, 3]))
+	print(lookandsay([-1,2,7]))
