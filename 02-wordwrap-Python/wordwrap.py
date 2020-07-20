@@ -17,6 +17,7 @@
 
 
 def fun_wordwrap(s, n):
+	s = s.strip()
 	temp = ""
 	count = 1
 	for i in s:
@@ -24,10 +25,13 @@ def fun_wordwrap(s, n):
 			temp = temp + "-"
 		else:
 			temp = temp + i
-		if (count % n == 0):
+		if (count % n == 0 and count!=len(s)):
 			temp = temp + "\n"
 		count += 1
 	return temp
+
+if __name__ == "__main__":
+	print(fun_wordwrap(" a b c de fgh ",  4))
 
 
  
