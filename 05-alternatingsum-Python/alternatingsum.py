@@ -6,6 +6,12 @@
 
 
 def fun_alternatingsum(a): 
-	return 0
+	summ = 0
+	for i in range(len(a)):
+		if (i % 2 == 0):
+			summ = summ + a[i]
+		else:
+			summ = summ - a[i]
+	return summ
 
 
