@@ -7,5 +7,10 @@
 
 
 def fun_rotatestrings(s, n):
-	return s
+	n = n % len(s)
+	return s[n:] + s[:n]
+	# return s
+
+if __name__ == "__main__":
+	print(fun_rotatestrings("abcd",-1))
 
