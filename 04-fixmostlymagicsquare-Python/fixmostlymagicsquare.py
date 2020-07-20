@@ -7,5 +7,15 @@
 
 
 def fixmostlymagicsquare(L):
-	pass
+	# pass
 	# Your code goes here
+	dic = {}
+	for i in range(len(a[0])):
+		summ1 = 0
+		summ2 = 0
+		for j in range(len(a[0])):
+			summ1 = summ1 + a[i][j]
+			summ2 = summ2 + a[j][i]
+		dic[(i,0)] = summ1
+		dic[(0,i)] = summ2
+	lst.sort()
