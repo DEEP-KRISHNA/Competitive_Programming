@@ -14,7 +14,17 @@ def multipolynomials(p1, p2):
 		for j in range(len(p1temp)-1,-1,-1):
 			# print(p1temp[len(p1temp)-j-1],p2[len(p2) - i])
 			res[j] = res[j] + (p1temp[len(p1temp)-j-1] * (p2[len(p2) - i]))
-	print(res[::-1])	
+	return res[::-1]
 
 if __name__ == "__main__":
-	multipolynomials([1, 1, 1], [1, 0])
+	lst = [
+            ([1, 1], [1, -1], [1, 0, -1]),
+            ([1, 1], [1, 1], [1, 2, 1]),
+            ([1, -1], [1, -1], [1, -2, 1]),
+            ([1], [1], [1]),
+            ([1, 0], [1, 1], [1, 1, 0]),
+            ([1, 1, 1], [1, 0], [1, 1, 1, 0]),
+        ]
+	for i in lst:
+		if (multipolynomials(i[0], i[1]) != i[2]):
+			print(i)
