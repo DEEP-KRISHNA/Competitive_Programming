@@ -13,8 +13,10 @@ class BST(object):
         temproot = self.root
         while (temproot != None):
             if (new_val > temproot.value):
+                # print(temproot.value)
                 temproot = temproot.right
             else:
+                print(temproot.value)
                 temproot = temproot.left
         temproot = Node(new_val)
 
@@ -45,4 +47,4 @@ if __name__ == "__main__":
     tree.insert(3)
     tree.insert(5)
     # print(tree.search(5))
-    print(tree.search(6))
+    # print(tree.search(6))
