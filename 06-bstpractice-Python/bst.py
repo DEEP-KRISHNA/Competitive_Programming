@@ -11,14 +11,21 @@ class BST(object):
     def insert(self, new_val):
         # Your code goes here
         temproot = self.root
+        prevnode = None
+        put = None
         while (temproot != None):
             if (new_val > temproot.value):
-                # print(temproot.value)
+                prevnode = temproot
+                put = "Right"
                 temproot = temproot.right
             else:
-                print(temproot.value)
+                prevnode = temproot
+                put = "Left"
                 temproot = temproot.left
-        temproot = Node(new_val)
+        if (put == "Left"):
+            prevnode.left = Node(new_val)
+        else:
+            prevnode.right = Node(new_val)
 
     def printSelf(self):
         # Your code goes here
@@ -40,11 +47,11 @@ class BST(object):
 
 if __name__ == "__main__":
     tree = BST(4)
-    # print(tree.search(4))
-    # print(tree.search(6))
+    print(tree.search(4))
+    print(tree.search(6))
     tree.insert(2)
     tree.insert(1)
     tree.insert(3)
     tree.insert(5)
-    # print(tree.search(5))
-    # print(tree.search(6))
+    print(tree.search(5))
+    print(tree.search(6))
