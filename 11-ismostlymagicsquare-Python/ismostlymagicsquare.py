@@ -24,7 +24,8 @@ def ismostlymagicsquare(a):
 			summ2 = summ2 + a[j][i]
 		lst.append(summ1)
 		lst.append(summ2)
-	print(lst)
+	lst.sort()
+	return lst[0] == lst[-1]
 
 if __name__ == "__main__":
 	ismostlymagicsquare([[2, 7, 6], [9, 5, 1], [4, 3, 8]])
