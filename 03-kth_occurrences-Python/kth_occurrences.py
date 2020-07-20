@@ -14,10 +14,12 @@ def fun_kth_occurrences(s, n):
 	lst = list(dic.values())
 	lst.sort()
 	lst = lst[::-1]
-	print(lst[n])
-	return 'a'
+	val = lst[n-1]
+	for i in dic:
+		if (dic[i] == val):
+			return i
 
 if __name__ == "__main__":
-	fun_kth_occurrences("helllo woorld", 2)
+	print(fun_kth_occurrences("helllo woorld", 2))
 
 
