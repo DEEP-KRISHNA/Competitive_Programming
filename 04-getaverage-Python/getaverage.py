@@ -9,6 +9,10 @@
 
 
 
-def fun_getaverage(s): 
-	return 0.0
+def fun_getaverage(s):
+	summ = 0
+	for i in s:
+		if (isinstance(i, int)):
+			summ = summ + i
+	return summ / len(s)
 
