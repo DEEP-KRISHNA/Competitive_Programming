@@ -17,4 +17,4 @@ def multipolynomials(p1, p2):
 	print(res[::-1])	
 
 if __name__ == "__main__":
-	multipolynomials([1, 1], [1, -1])
+	multipolynomials([1, 1, 1], [1, 0])
