@@ -15,7 +15,7 @@ def shortenlongruns(L, k):
 	lst = lookandsay(L)
 	for i in lst:
 		if (i[0] >= k):
-			newlst.extend([i[1]] * (i[0] - k))
+			newlst.extend([i[1]] * (k-1))
 		else:
 			newlst.extend([i[1]] * i[0])
 	return newlst
@@ -37,4 +37,4 @@ def lookandsay(a):
 	return lst
 
 if __name__ == "__main__":
-	print(shortenlongruns([2, 3, 5, 5, 5, 3], 2))
+	print(shortenlongruns([2, 3, 5, 5, 5, 3], 3))
