@@ -38,9 +38,9 @@ class BinaryTree(object):
         elif (start == None or (start.left==None and start.right==None)):
             return False
         if(start.left!=None):
-            self.preorder_search(start.left, find_val)
+            return self.preorder_search(start.left, find_val)
         if(start.right!=None):
-            self.preorder_search(start.right, find_val)
+            return self.preorder_search(start.right, find_val)
         # pass
 
     def preorder_print(self, start, traversal):
