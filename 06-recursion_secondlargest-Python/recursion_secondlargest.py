@@ -14,8 +14,10 @@
 # values as we recursively traversed the list. Also, you may not use loops/iteration in this problem
 
 def recursion_secondlargest(L):
+	if (L == []):
+		return None
 	# Your code goes here
-	return rec(L, None, None,0)
+	return rec(L, None, L[0],0)
 	
 def rec(lst, second, first, i):
 	if (i == len(lst)):
@@ -24,7 +26,7 @@ def rec(lst, second, first, i):
 		if (lst[i] >= first):
 			second = first
 			first = lst[i]
-		rec(lst, second, first, i + 1)
+		return rec(lst, second, first, i + 1)
 		
 if __name__ == "__main__":
-	print([1, 2, 3, 4, 5])
+	print(recursion_secondlargest([ ]))
