@@ -38,6 +38,13 @@ class Graph(object):
         self.edges.append(new_edge)
 
     def get_edge_list(self):
+        for i in self.nodes:
+            print(i.value)
+            for j in i.edges:
+                print(j.value)
+                print(j.node_from)
+                print(j.node_to)
+            print()
         edge_list = []
         return edge_list
 
@@ -50,3 +57,11 @@ class Graph(object):
         adjacency_matrix = [[0 for i in range(max_index + 1)] for j in range(max_index + 1)]
         return adjacency_matrix
 
+
+if __name__ == "__main__":
+    graph = Graph()
+    graph.insert_edge(100, 1, 2)
+    graph.insert_edge(101, 1, 3)
+    graph.insert_edge(102, 1, 4)
+    graph.insert_edge(103, 3, 4)
+    print(graph.get_edge_list())
