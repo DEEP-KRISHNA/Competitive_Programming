@@ -15,4 +15,16 @@
 
 def recursion_secondlargest(L):
 	# Your code goes here
-	pass
+	return rec(L, None, None,0)
+	
+def rec(lst, second, first, i):
+	if (i == len(lst)):
+		return second
+	else:
+		if (lst[i] >= first):
+			second = first
+			first = lst[i]
+		rec(lst, second, first, i + 1)
+		
+if __name__ == "__main__":
+	print([1, 2, 3, 4, 5])
