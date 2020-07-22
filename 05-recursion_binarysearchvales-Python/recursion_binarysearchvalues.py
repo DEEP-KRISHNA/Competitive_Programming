@@ -23,15 +23,23 @@ def recursion_binarysearchvalues(L, v):
 	return rec(L, v, 0, len(L) - 1, [])
 	
 def rec(lst, val, low, high, vallst):
-	mid = int((low + high) / 2)
+	print(low, high)
+	print(vallst)
+	mid = (low + high) // 2
 	temp = lst[mid]
-	if (temp == val):
+	print(temp,val,temp>val)
+	if ((temp == val) or (low >= high)):
+		if(temp == val):
+			vallst.append((mid, temp))
 		return vallst
 	else:
 		if (temp > val):
-			low = mid
+			high = mid-1
 		else:
-			high = mid
+			low = mid+1
 		vallst.append((mid, temp))
-		return rec(lst,val,low,high,vallst)
+		return rec(lst, val, low, high, vallst)
+
+if __name__ == "__main__":
+	print(recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'], 'z'))
 	
