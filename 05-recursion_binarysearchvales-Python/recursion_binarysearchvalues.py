@@ -29,8 +29,8 @@ def rec(lst, val, low, high, vallst):
 	temp = lst[mid]
 	print(temp,val,temp>val)
 	if ((temp == val) or (low >= high)):
-		if(temp == val):
-			vallst.append((mid, temp))
+		# if(temp == val):
+		vallst.append((mid, temp))
 		return vallst
 	else:
 		if (temp > val):
@@ -41,5 +41,5 @@ def rec(lst, val, low, high, vallst):
 		return rec(lst, val, low, high, vallst)
 
 if __name__ == "__main__":
-	print(recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'], 'z'))
+	print(recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'], 'b'))
 	
