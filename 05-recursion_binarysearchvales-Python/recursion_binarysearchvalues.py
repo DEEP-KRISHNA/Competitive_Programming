@@ -23,11 +23,11 @@ def recursion_binarysearchvalues(L, v):
 	return rec(L, v, 0, len(L) - 1, [])
 	
 def rec(lst, val, low, high, vallst):
-	print(low, high)
-	print(vallst)
+	# print(low, high)
+	# print(vallst)
 	mid = (low + high) // 2
 	temp = lst[mid]
-	print(temp,val,temp>val)
+	# print(temp,val,temp>val)
 	if ((temp == val) or (low >= high)):
 		# if(temp == val):
 		vallst.append((mid, temp))
