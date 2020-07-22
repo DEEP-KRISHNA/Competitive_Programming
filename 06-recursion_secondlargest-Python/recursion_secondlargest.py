@@ -34,4 +34,4 @@ def rec(lst, second, first, i):
 		return rec(lst, second, first, i + 1)
 		
 if __name__ == "__main__":
-	print(recursion_secondlargest([4,3]))
+	print(recursion_secondlargest([-3,-4]))
