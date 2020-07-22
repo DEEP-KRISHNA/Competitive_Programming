@@ -5,4 +5,11 @@
 
 def recursion_powersof3ton(n):
 	# Your code goes here
-	pass
+	n= rec(0,n)
+	print(n)
+
+def rec(i, n):
+	if ((3 ** i) > n):
+		return i - 1
+	else:
+		return rec(i+1,n)
