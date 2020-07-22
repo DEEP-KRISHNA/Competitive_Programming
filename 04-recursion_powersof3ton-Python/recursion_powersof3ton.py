@@ -5,11 +5,30 @@
 
 def recursion_powersof3ton(n):
 	# Your code goes here
-	n= rec(0,n)
-	print(n)
+	n = rec(0, n)
+	if (n == 0):
+		return None
+	else:
+		lst = []
+		for i in range(n):
+			lst.append(3**i)
+		return lst
 
 def rec(i, n):
 	if ((3 ** i) > n):
-		return i - 1
+		return i
 	else:
-		return rec(i+1,n)
+		return rec(i + 1, n)
+
+if __name__ == "__main__":
+	recursion_powersof3ton(0)
+	recursion_powersof3ton(-42)
+	recursion_powersof3ton(0.99)
+	recursion_powersof3ton(1)
+	recursion_powersof3ton(8.99)
+	recursion_powersof3ton(9)
+	recursion_powersof3ton(100)
+
+
+
+
