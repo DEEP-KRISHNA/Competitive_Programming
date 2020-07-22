@@ -19,7 +19,10 @@ def recursion_secondlargest(L):
 	elif (len(L) == 1):
 		return None
 	# Your code goes here
-	return rec(L, None, L[0],0)
+	if(L[0]>L[1]):
+		return rec(L, L[0], L[1], 0)
+	else:
+		return rec(L, L[1], L[0], 0)
 	
 def rec(lst, second, first, i):
 	if (i == len(lst)):
