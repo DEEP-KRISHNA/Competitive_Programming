@@ -16,6 +16,8 @@
 def recursion_secondlargest(L):
 	if (L == []):
 		return None
+	elif (len(L) == 1):
+		return None
 	# Your code goes here
 	return rec(L, None, L[0],0)
 	
@@ -29,4 +31,4 @@ def rec(lst, second, first, i):
 		return rec(lst, second, first, i + 1)
 		
 if __name__ == "__main__":
-	print(recursion_secondlargest([4]))
+	print(recursion_secondlargest([4,3]))
