@@ -54,19 +54,32 @@ class Graph(object):
         return edge_list
 
     def get_adjacency_list(self):
+        dic = {}
+        max_index = len(self.edges)
         adjacency_list = [None] * (max_index + 1)
+        edg_lst = self.get_edge_list()
+        for i in edg_lst:
+            if (i[1] in dic.keys()):
+                dic[i[1]].append((i[2], i[0]))
+            else:
+                dic[i[1]] = [(i[2], i[0])]
+        # print(dic)
+        for i in range(max_index + 1):
+            if (i in dic.keys()):
+                adjacency_list[i] = (dic[i])
+        # print(adjacency_list)
         return adjacency_list
     
     
     def get_adjacency_matrix(self):
-        max_index = len(self.edges) + 1
+        max_index = len(self.edges)
         # print(len(self.nodes))
         adjacency_matrix = [[0 for i in range(max_index + 1)] for j in range(max_index + 1)]
         edg_lst = self.get_edge_list()
         # print(edg_lst)
         for i in edg_lst:
-            adjacency_matrix[i[1]][i[2]+1] = i[0]
-        print(adjacency_matrix)
+            adjacency_matrix[i[1]][i[2]] = i[0]
+        # print(adjacency_matrix)
         return adjacency_matrix
 
 
@@ -77,4 +90,4 @@ if __name__ == "__main__":
     graph.insert_edge(102, 1, 4)
     graph.insert_edge(103, 3, 4)
     # print(graph.get_edge_list())
-    print(graph.get_adjacency_matrix())
+    print(graph.get_adjacency_list())
