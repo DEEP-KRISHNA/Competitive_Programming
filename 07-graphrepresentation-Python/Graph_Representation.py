@@ -49,3 +49,4 @@ class Graph(object):
     def get_adjacency_matrix(self):
         adjacency_matrix = [[0 for i in range(max_index + 1)] for j in range(max_index + 1)]
         return adjacency_matrix
+
