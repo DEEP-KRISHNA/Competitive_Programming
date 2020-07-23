@@ -8,10 +8,10 @@ def nthwithproperty309(n):
 	# Your code goes here
 	n = n + 1
 	i = 0
-	num = 308
+	num = 309
 	while (i < n):
 		poww = num ** 5
-		flag = [False for i in range(10)]
+		flag = [False for i in range(9)]
 		print(poww)
 		print(flag)
 		i = i + 1
