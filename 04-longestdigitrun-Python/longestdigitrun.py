@@ -41,4 +41,4 @@ def lookandsay(a):
 
 
 if __name__ == "__main__":
-	print(lookandsay([-1, 2, 7]))
+	print(longestdigitrun(123330001))
