@@ -16,13 +16,14 @@ def fun_nth_smithnumber(n):
     while (i < n):
         lst = prime_factor(num)
         sum1 = 0
-        for j in lst:
-            sum1 = sum1 + j
-        sum2 = 0
-        for j in str(num):
-            sum2 = sum2 + int(j)
-        if (sum1 == sum2):
-            i = i + 1
+        if(len(lst)!=1):
+            for j in lst:
+                sum1 = sum1 + j
+            sum2 = 0
+            for j in str(num):
+                sum2 = sum2 + int(j)
+            if (sum1 == sum2):
+                i = i + 1
         num += 1
     return num-1
 
@@ -42,4 +43,5 @@ def prime_factor(n):
     return lst
 
 if __name__ == "__main__":
-    print(fun_nth_smithnumber(2))
+    print(fun_nth_smithnumber(1))
+    print(prime_factor(22))
