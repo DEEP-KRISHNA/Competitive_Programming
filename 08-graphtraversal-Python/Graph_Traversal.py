@@ -141,7 +141,28 @@ class Graph(object):
         RETURN: a list of the traversed node values (integers).
         """
         # pass
-        
+        matrix = self.get_adjacency_matrix()
+        rang = self.find_max_index() + 1
+        vis = [False for i in range(rang)]
+        stac = [start_node.value]
+        trav = []
+        while (len(stac)):
+            rec = stac[-1]
+            stac.pop()
+            if (not vis[rec]):
+                trav.append(rec)
+                vis[rec] = True
+            adj_lis = matrix[rec]
+            for i in range(len(adj_lis)):
+                if (adj_lis[i] != 0):
+                    if (not vis[i]):
+                        stac.append(i)
+                        break
+        for i in self.nodes:
+            if i.value not in trav:
+                trav.append(i.value)
+        return trav
+
 
     def dfs(self, start_node_num):
         """Outputs a list of numbers corresponding to the traversed nodes
@@ -164,11 +185,51 @@ class Graph(object):
         ARGUMENTS: start_node_num is the node number (integer)
         MODIFIES: the value of the visited property of nodes in self.nodes
         RETURN: a list of the node values (integers)."""
-        pass
+        # pass
+        matrix = self.get_adjacency_matrix()
+        rang = self.find_max_index() + 1
+        vis = [False for i in range(rang)]
+        que = [start_node_num]
+        trav = []
+        while (len(que)):
+            rec = que[0]
+            que.remove(rec)
+            if (not vis[rec]):
+                trav.append(rec)
+                vis[rec] = True
+            adj_lis = matrix[rec]
+            for i in range(len(adj_lis)):
+                if (adj_lis[i] != 0):
+                    if (not vis[i]):
+                        que.append(i)
+        return trav
 
     def bfs_names(self, start_node_num):
         """Return the results of bfs with numbers converted to names."""
-        del ret_list[0 : len(ret_list)]
+        # del ret_list[0 : len(ret_list)]
         return [self.node_names[num] for num in self.bfs(start_node_num)]
 
 
+if __name__ == "__main__":
+    graph = Graph()
+    graph.set_node_names(('Mountain View', 'San Francisco',
+                        'London', 'Shanghai', 'Berlin', 'Sao Paolo', 'Bangalore'))
+
+    graph.insert_edge(51, 0, 1)     # MV <-> SF
+    graph.insert_edge(51, 1, 0)     # SF <-> MV
+    graph.insert_edge(9950, 0, 3)   # MV <-> Shanghai
+    graph.insert_edge(9950, 3, 0)   # Shanghai <-> MV
+    graph.insert_edge(10375, 0, 5)  # MV <-> Sao Paolo
+    graph.insert_edge(10375, 5, 0)  # Sao Paolo <-> MV
+    graph.insert_edge(9900, 1, 3)   # SF <-> Shanghai
+    graph.insert_edge(9900, 3, 1)   # Shanghai <-> SF
+    graph.insert_edge(9130, 1, 4)   # SF <-> Berlin
+    graph.insert_edge(9130, 4, 1)   # Berlin <-> SF
+    graph.insert_edge(9217, 2, 3)   # London <-> Shanghai
+    graph.insert_edge(9217, 3, 2)   # Shanghai <-> London
+    graph.insert_edge(932, 2, 4)    # London <-> Berlin
+    graph.insert_edge(932, 4, 2)    # Berlin <-> London
+    graph.insert_edge(9471, 2, 5)   # London <-> Sao Paolo
+    graph.insert_edge(9471, 5, 2)  # Sao Paolo <-> London
+    graph.dfs_names(2)
+    graph.bfs_names(2)
