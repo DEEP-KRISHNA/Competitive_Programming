@@ -35,11 +35,11 @@ def prime_factor(n):
     
     for i in range(3, int(math.sqrt(n)) + 1, 2):
         while (n % i == 0):
-            lst.append(i)
+            lst.append(int(i))
             n = n / i
             
     if (n > 2):
-        lst.append(n)
+        lst.append(int(n))
     return lst
 
 if __name__ == "__main__":
