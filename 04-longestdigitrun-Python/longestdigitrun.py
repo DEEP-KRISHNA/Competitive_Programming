@@ -16,7 +16,7 @@ def longestdigitrun(n):
 		if (i[0] == look[1]):
 			final.append(i[1])
 	final.sort()
-	return final[0]
+	return int(final[0])
 	# Your code goes here
 	pass
 
@@ -41,4 +41,4 @@ def lookandsay(a):
 
 
 if __name__ == "__main__":
-	print(longestdigitrun(123330001))
+	print(longestdigitrun(112233455567))
