@@ -6,5 +6,17 @@
 
 
 def fun_carrylessadd(x, y):
-	return 0
-
+	xstr = str(x)
+	ystr = str(y)
+	xflag = False
+	minlen = len(xstr)
+	if (len(xstr) > len(ystr)):
+		xflag = True
+		minlen = len(ystr)
+	res = ''
+	for i in range(minlen):
+		res = res + str(int(xstr[i])+int(ystr[i]))[-1]
+	if (xflag):
+		maxx = len(xstr) - minlen
+		return int(xstr[:maxx] + res)
+	return int(res)
