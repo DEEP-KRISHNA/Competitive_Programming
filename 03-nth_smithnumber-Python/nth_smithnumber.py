@@ -7,6 +7,39 @@
 # so fun_nthsmithnumber(0) should return 4
 # so fun_nthsmithnumber(1) should return 22
 
+import math
 
 def fun_nth_smithnumber(n):
-    return 1
+    n = n + 1
+    i = 0
+    num = 3
+    while (i < n):
+        lst = prime_factor(num)
+        sum1 = 0
+        for j in lst:
+            sum1 = sum1 + j
+        sum2 = 0
+        for j in str(num):
+            sum2 = sum2 + int(j)
+        if (sum1 == sum2):
+            i = i + 1
+        num += 1
+    return num-1
+
+def prime_factor(n):
+    lst = []
+    while (n % 2 == 0):
+        lst.append(2)
+        n = n / 2
+    
+    for i in range(3, int(math.sqrt(n)) + 1, 2):
+        while (n % i == 0):
+            lst.append(i)
+            n = n / i
+            
+    if (n > 2):
+        lst.append(n)
+    return lst
+
+if __name__ == "__main__":
+    print(fun_nth_smithnumber(2))
