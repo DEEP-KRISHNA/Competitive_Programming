@@ -8,14 +8,17 @@ def nthwithproperty309(n):
 	# Your code goes here
 	n = n + 1
 	i = 0
-	num = 309
+	num = 308
 	while (i < n):
 		poww = num ** 5
-		flag = [False for i in range(9)]
-		print(poww)
-		print(flag)
-		i = i + 1
+		flag = [False for i in range(10)]
+		for j in str(poww):
+			flag[int(j)] = True
+		if(False not in flag):
+			i = i + 1
+		num += 1
+	return num - 1
 		
 
 if __name__ == "__main__":
-	nthwithproperty309(1)
+	print(nthwithproperty309(0))
