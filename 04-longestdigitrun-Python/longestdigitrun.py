@@ -11,6 +11,12 @@ def longestdigitrun(n):
 	for i in str(n):
 		lst.append(i)
 	look = lookandsay(lst)
+	final = []
+	for i in look[0]:
+		if (i[0] == look[1]):
+			final.append(i[1])
+	final.sort()
+	return final[0]
 	# Your code goes here
 	pass
 
