@@ -18,7 +18,8 @@ def fun_nth_smithnumber(n):
         sum1 = 0
         if(len(lst)!=1):
             for j in lst:
-                sum1 = sum1 + j
+                for k in str(j):
+                    sum1 = sum1 + int(k)
             sum2 = 0
             for j in str(num):
                 sum2 = sum2 + int(j)
@@ -44,4 +45,4 @@ def prime_factor(n):
 
 if __name__ == "__main__":
     print(fun_nth_smithnumber(1))
-    print(prime_factor(22))
+    # print(prime_factor(22))
