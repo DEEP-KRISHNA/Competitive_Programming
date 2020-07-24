@@ -16,14 +16,15 @@ def fun_nth_lefttruncatableprime(n):
     numm = 1
     while (i < n):
         num = str(numm)
-        count = 0
-        for j in range(len(num)):
-            temp = int(num[j:])
-            if (prime(temp)):
-                count += 1
-        if (count == len(num)):
-            i += 1
-            print(numm)
+        if('0' not in num):
+            count = 0
+            for j in range(len(num)):
+                temp = int(num[j:])
+                if (prime(temp)):
+                    count += 1
+            if (count == len(num)):
+                i += 1
+                # print(numm)
         numm += 1
     return numm - 1
             
