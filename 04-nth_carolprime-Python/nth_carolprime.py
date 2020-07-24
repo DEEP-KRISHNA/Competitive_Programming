@@ -11,13 +11,13 @@
 import math
 
 def fun_nth_carolprime(n):
-    n = n + 1
+    n = n + 2
     i = 0
     val = 1
     while (i < n):
         car = carol(val)
-        if (prime(car)):
-            i = i + 1
+        # if (prime(car)):
+        i = i + 1
         val += 1
     return car
 
