@@ -27,3 +27,6 @@ def fun_nth_kaprekarnumber(n):
                     break
         num += 1
     return num-1
+
+if __name__ == "__main__":
+    print(fun_nth_kaprekarnumber(0))
