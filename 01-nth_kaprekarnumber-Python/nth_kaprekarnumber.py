@@ -18,9 +18,9 @@ def fun_nth_kaprekarnumber(n):
     while (i < n):
         poww = num * num
         poww = str(poww)
-        for i in range(1, len(poww)):
-            left = poww[:i]
-            right = poww[i:]
+        for j in range(1, len(poww)-1):
+            left = poww[:j]
+            right = poww[j:]
             if (right != '0'):
                 if ((int(left) + int(right)) == num):
                     i += 1
@@ -29,4 +29,4 @@ def fun_nth_kaprekarnumber(n):
     return num-1
 
 if __name__ == "__main__":
-    print(fun_nth_kaprekarnumber(1))
+    print(fun_nth_kaprekarnumber(5))
