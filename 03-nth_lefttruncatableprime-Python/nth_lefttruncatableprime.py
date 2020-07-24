@@ -11,4 +11,25 @@
 import math
 
 def fun_nth_lefttruncatableprime(n):
-    return 1
+    n = n + 1
+    i = 0
+    numm = 1
+    while (i < n):
+        num = str(numm)
+        count = 0
+        for j in range(len(num)):
+            temp = int(num[j:])
+            if (prime(temp)):
+                count += 1
+        if (count == len(num)):
+            i += 1
+        numm += 1
+    return numm - 1
+            
+
+
+def prime(num):
+    for i in range(2, int(math.sqrt(num)) + 1):
+        if ((num % i) == 0):
+            return False
+    return True
