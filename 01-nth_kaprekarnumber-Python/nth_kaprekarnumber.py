@@ -10,4 +10,20 @@
 import math
 
 def fun_nth_kaprekarnumber(n):
-    return 1;
+    if (n == 0):
+        return 1
+    n = n + 1
+    i = 1
+    num = 8
+    while (i < n):
+        poww = num * num
+        poww = str(poww)
+        for i in range(1, len(poww)):
+            left = poww[:i]
+            right = poww[i:]
+            if (right != '0'):
+                if ((int(left) + int(right)) == num):
+                    i += 1
+                    break
+        num += 1
+    return num-1
