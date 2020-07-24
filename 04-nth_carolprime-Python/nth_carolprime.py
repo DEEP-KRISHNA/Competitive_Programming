@@ -8,6 +8,35 @@
 # Hint: you may need to generate only Carol numbers, and then test those as you go 
 # for primality (and you may need to think about that hint for a while for it to make sense!).
 
+import math
 
 def fun_nth_carolprime(n):
-    return 0
+    n = n + 1
+    i = 0
+    val = 1
+    while (i < n):
+        car = carol(val)
+        if (prime(car)):
+            i = i + 1
+        val += 1
+    return car
+
+def carol(num):
+    num = 2 ** num
+    num = num - 1
+    num = num ** 2
+    num = num - 2
+    return num
+
+def prime(num):
+    if (num <= 1):
+        return False
+    # print(num)
+    for i in range(2, (int(math.sqrt(num))) + 1):
+        if (num % i == 0):
+            return False
+    return True
+
+if __name__ == "__main__":
+    print(fun_nth_carolprime(6))
+
