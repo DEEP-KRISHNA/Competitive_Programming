@@ -16,7 +16,6 @@ def ishappyprimenumber(n):
     for i in range(2, int(math.sqrt(n)) + 1):
         if (n % i == 0):
             return False
-    print("prime")
     return happy(n)
     # pass
 
@@ -31,7 +30,8 @@ def happy(n):
         summ = 0
         for i in n:
             summ = summ + (int(i) ** 2)
-        happy(summ)
+        # print(summ)
+        return happy(summ)
 
 if __name__ == "__main__":
     print(ishappyprimenumber(23))
