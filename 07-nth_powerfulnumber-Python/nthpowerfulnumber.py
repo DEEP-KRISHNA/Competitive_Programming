@@ -13,8 +13,8 @@ def nthpowerfulnumber(n):
 	n = n + 1
 	i = 1
 	num = 1
-	while (i < n):
-		lst = factors(num)
+	# while (i < n):
+	# 	lst = factors(num)
 
 
 def factors(n):
@@ -27,5 +27,8 @@ def factors(n):
 		if (flag == True):
 			lst.append(i)
 	if (n > 2):
-		lst.append(n)
+		lst.append(int(n))
 	return lst
+
+if __name__ == "__main__":
+	print(factors(568))
