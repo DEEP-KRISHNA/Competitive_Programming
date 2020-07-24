@@ -29,10 +29,12 @@ def fun_nth_lefttruncatableprime(n):
 
 
 def prime(num):
+    if (num == 1):
+        return False
     for i in range(2, int(math.sqrt(num)) + 1):
         if ((num % i) == 0):
             return False
     return True
 
 if __name__ == "__main__":
-    print(fun_nth_lefttruncatableprime(2))
+    print(fun_nth_lefttruncatableprime(25))
