@@ -20,9 +20,10 @@ def fun_nth_kaprekarnumber(n):
         poww = str(poww)
         for j in range(1, len(poww)):
             left = poww[:j]
-            right = poww[j:]
-            if (right != '0'):
-                if ((int(left) + int(right)) == num):
+            right = int(poww[j:])
+            if (right != 0):
+                if ((int(left) + right) == num):
+                    print(num)
                     i += 1
                     break
         num += 1
