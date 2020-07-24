@@ -33,3 +33,6 @@ def prime(num):
         if ((num % i) == 0):
             return False
     return True
+
+if __name__ == "__main__":
+    print(fun_nth_lefttruncatableprime(7))
