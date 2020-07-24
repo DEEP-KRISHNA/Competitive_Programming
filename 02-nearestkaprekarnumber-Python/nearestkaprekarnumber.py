@@ -13,4 +13,26 @@
 import math
 
 def fun_nearestkaprekarnumber(n):
-    return 1
+    num1 = n
+    num2 = n
+    while (not check(num1)):
+        num1 += 1
+    while (not check(num2)):
+        num2 -= 1
+    if (n - num2 > num1 - n):
+        return num1
+    return num2
+
+def check(num):
+    poww = num * num
+    poww = str(poww)
+    for j in range(1, len(poww)):
+        left = poww[:j]
+        right = int(poww[j:])
+        if (right != 0):
+            if ((int(left) + right) == num):
+                return True
+    return False
+
+if __name__ == "__main__":
+    print(fun_nearestkaprekarnumber(49))
