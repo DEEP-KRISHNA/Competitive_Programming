@@ -31,4 +31,4 @@ def factors(n):
 	return lst
 
 if __name__ == "__main__":
-	print(factors(568))
+	print(factors(365))
