@@ -23,11 +23,11 @@ def fun_nth_kaprekarnumber(n):
             right = int(poww[j:])
             if (right != 0):
                 if ((int(left) + right) == num):
-                    print(num)
+                    # print(num)
                     i += 1
                     break
         num += 1
     return num-1
 
 if __name__ == "__main__":
-    print(fun_nth_kaprekarnumber(10))
+    print(fun_nth_kaprekarnumber(20))
