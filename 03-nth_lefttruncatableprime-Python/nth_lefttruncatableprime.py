@@ -35,4 +35,4 @@ def prime(num):
     return True
 
 if __name__ == "__main__":
-    print(fun_nth_lefttruncatableprime(7))
+    print(fun_nth_lefttruncatableprime(2))
