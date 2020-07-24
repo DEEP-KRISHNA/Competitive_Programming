@@ -23,6 +23,7 @@ def fun_nth_lefttruncatableprime(n):
                 count += 1
         if (count == len(num)):
             i += 1
+            print(numm)
         numm += 1
     return numm - 1
             
