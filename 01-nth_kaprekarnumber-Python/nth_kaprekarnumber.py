@@ -29,4 +29,4 @@ def fun_nth_kaprekarnumber(n):
     return num-1
 
 if __name__ == "__main__":
-    print(fun_nth_kaprekarnumber(0))
+    print(fun_nth_kaprekarnumber(1))
