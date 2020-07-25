@@ -7,4 +7,5 @@
 # fun_nth_tidynumber(35) = 46
 
 def fun_nth_tidynumber(n):
-    return 0
+    # return 0
+    n = n+1
