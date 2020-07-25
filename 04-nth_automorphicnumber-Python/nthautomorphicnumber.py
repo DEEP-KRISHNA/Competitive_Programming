@@ -43,7 +43,7 @@ def mul(num):
 	summ = 0
 	for i in range(lenn):
 		oth = lenn-1-i
-		summ = summ + (lst1[oth]*lst2[i]) * (10 ** oth)
+		summ = summ + ((lst1[oth]*lst2[i]) * (10 ** oth))
 	print(summ)
 
 if __name__ == "__main__":
