@@ -8,21 +8,21 @@
 import math
 
 def nthcircularprime(n):
-	n = n + 1
+	n = n
 	i = 0
 	num = 1
-	# while (i < n):
-	# 	nu = str(num)
-	# 	for i in range(len(nu)):
-	# 		left = nu[i:]
-	# 		right = nu[:i]
-	nu = "123456789"
-	for i in range(len(nu)):
-		left = nu[i:]
-		right = nu[:i]
-		print(left+right)
-	# Your code goes here
-	pass
+	while (i < n):
+		nu = str(num)
+		flag = True
+		for i in range(len(nu)):
+			left = nu[i:]
+			right = nu[:i]
+			if (not prime(int(left + right))):
+				flag = False
+		if (flag):
+			i = i + 1
+		num = num + 1
+	return num - 1
 
 def prime(num):
 	if (num <= 1):
@@ -31,3 +31,6 @@ def prime(num):
 		if (num % 1 == 0):
 			return False
 	return True
+
+if __name__ == "__main__":
+	print(nthcircularprime(0))
