@@ -37,4 +37,4 @@ def prime(num):
     return num in [2,3,5]
 
 if __name__ == "__main__":
-	print(fun_nth_uglynumber(0))
+	print(fun_nth_uglynumber(100))
