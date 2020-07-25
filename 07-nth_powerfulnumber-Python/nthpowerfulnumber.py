@@ -15,8 +15,17 @@ def nthpowerfulnumber(n):
 	num = 1
 	while (i < n):
 		lst = factors(num)
-
-
+		flag = True
+		for i in lst:
+			sq = i * i
+			print(num,sq)
+			if ((num % sq) != 0):
+				flag = False
+				break
+		if (flag):
+			i = i + 1
+		num = num + 1
+	return num - 1		
 
 def factors(n):
 	lst = []
@@ -32,4 +41,4 @@ def factors(n):
 	return lst
 
 if __name__ == "__main__":
-	print(factors(1))
+	print(nthpowerfulnumber(10))
