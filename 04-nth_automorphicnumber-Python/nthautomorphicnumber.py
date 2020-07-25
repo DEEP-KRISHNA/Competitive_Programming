@@ -44,7 +44,7 @@ def mul(nu):
 	for i in range(lenn):
 		summ = summ + ((lst1[lenn - 1 - i] * lst2[i]) * (10 ** i))
 	# print(summ)
-	return int(str(summ)[::-1][:lenn+1][::-1])
+	return int(str(summ)[::-1][:lenn][::-1])
 
 if __name__ == "__main__":
 	print(mul(740081787109376))
