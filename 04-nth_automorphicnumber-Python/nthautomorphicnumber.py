@@ -30,6 +30,8 @@ def nthautomorphicnumbers(n):
 
 def mul(nu):
 	# nu = num
+	if (nu == 0):
+		return 0
 	if (nu % 10 == 0):
 		return nu+5
 	lenn = len(str(nu))
