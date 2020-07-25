@@ -35,4 +35,4 @@ def prime(num):
 	return True
 
 if __name__ == "__main__":
-	print(nthcircularprime(2))
+	print(nthcircularprime(5))
