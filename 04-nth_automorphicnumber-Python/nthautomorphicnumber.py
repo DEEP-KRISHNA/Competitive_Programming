@@ -42,12 +42,9 @@ def mul(num):
 		nu = nu % den
 	summ = 0
 	for i in range(lenn):
-		oth = lenn - 1 - i
-		print((lst1[oth] * lst2[i]))
-		print((lst1[oth]*lst2[i]) * (10 ** i))
-		summ = summ + ((lst1[oth]*lst2[i]) * (10 ** i))
+		summ = summ + ((lst1[lenn - 1 - i]*lst2[i]) * (10 ** i))
 	print(summ)
 
 if __name__ == "__main__":
-	mul(9376)
+	mul(25)
 
