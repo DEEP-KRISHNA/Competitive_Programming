@@ -53,4 +53,5 @@ def mul(nu):
 
 if __name__ == "__main__":
 	print(nthautomorphicnumbers(28))
+	# print(mul(9))
 
