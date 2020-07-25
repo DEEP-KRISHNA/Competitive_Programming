@@ -46,5 +46,5 @@ def mul(num):
 	print(summ)
 
 if __name__ == "__main__":
-	mul(25)
+	mul(740081787109376)
 
