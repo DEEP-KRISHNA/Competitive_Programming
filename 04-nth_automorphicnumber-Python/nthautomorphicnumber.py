@@ -28,17 +28,15 @@ def nthautomorphicnumbers(n):
 		# 	for i in range(len(str(nu))):
 
 
-def mul(num):
-	nu = num
+def mul(nu):
+	# nu = num
 	lenn = len(str(nu))
-	summ = 0
 	lst1 = []
 	lst2 = []
 	for i in range(lenn):
 		den = 10 ** (lenn - i - 1)
 		lst1.append(int(nu / den))
 		lst2.append(nu)
-		# summ = summ + (nu * int(nu / den))
 		nu = nu % den
 	summ = 0
 	for i in range(lenn):
@@ -46,5 +44,5 @@ def mul(num):
 	print(summ)
 
 if __name__ == "__main__":
-	mul(740081787109376)
+	mul(10)
 
