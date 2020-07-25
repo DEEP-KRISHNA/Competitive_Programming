@@ -22,7 +22,7 @@ def nthpowerfulnumber(n):
 				flag = False
 				break
 		if (flag):
-			print(num)
+			# print(num)
 			i = i + 1
 		num = num + 1
 	return num - 1		
@@ -41,4 +41,4 @@ def factors(n):
 	return lst
 
 if __name__ == "__main__":
-	print(nthpowerfulnumber(10))
+	print(nthpowerfulnumber(53))
