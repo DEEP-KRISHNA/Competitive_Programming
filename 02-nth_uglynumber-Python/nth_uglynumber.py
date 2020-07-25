@@ -7,11 +7,19 @@ import math
 def fun_nth_uglynumber(n):
 	i = 0
 	n = n + 1
-	return 0
+	num = 0
+	while (i < n):
+		if (prime_factors(num)):
+			i += 1
+		num += 1
+	return num-1
 
 def prime_factors(n):
+	n_org = n
 	if (n == 0):
 		return False
+	if (n == 1):
+		return True
 	for i in range(2, int(math.sqrt(n)) + 1):
 		flag = False
 		while (n % i == 0):
@@ -21,19 +29,12 @@ def prime_factors(n):
 			if (not prime(i)):
 				return False
 	if (n > 2):
-		if (not prime(i)):
+		if (not prime(n)):
 			return False
 	return True
 
 def prime(num):
-    if (num <= 1):
-        return False
-
-    for i in range(2, int(math.sqrt(num)) + 1):
-	    if (num % i == 0):
-	        return False
-    
-    return True
+    return num in [2,3,5]
 
 if __name__ == "__main__":
-	print(prime_factors(11))
+	print(fun_nth_uglynumber(0))
