@@ -30,6 +30,8 @@ def nthautomorphicnumbers(n):
 
 def mul(nu):
 	# nu = num
+	if (nu % 10 == 0):
+		return nu+5
 	lenn = len(str(nu))
 	lst1 = []
 	lst2 = []
@@ -41,8 +43,8 @@ def mul(nu):
 	summ = 0
 	for i in range(lenn):
 		summ = summ + ((lst1[lenn - 1 - i]*lst2[i]) * (10 ** i))
-	print(summ)
+	return int(str(summ)[::-1][:lenn+1][::-1])
 
 if __name__ == "__main__":
-	mul(100)
+	print(mul(12))
 
