@@ -47,5 +47,5 @@ def mul(nu):
 	return int(str(summ)[::-1][:lenn][::-1])
 
 if __name__ == "__main__":
-	print(mul(626))
+	print(mul(2))
 
