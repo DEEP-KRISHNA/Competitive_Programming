@@ -17,6 +17,7 @@ def nthpowerfulnumber(n):
 		lst = factors(num)
 
 
+
 def factors(n):
 	lst = []
 	for i in range(2, int(math.sqrt(n)) + 1):
@@ -26,7 +27,7 @@ def factors(n):
 			flag = True
 		if (flag == True):
 			lst.append(i)
-	if (n > 2):
+	if (n >= 1):
 		lst.append(int(n))
 	return lst
 
