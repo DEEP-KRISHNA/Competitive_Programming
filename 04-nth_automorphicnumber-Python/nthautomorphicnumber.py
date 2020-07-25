@@ -44,5 +44,5 @@ def mul(nu):
 	print(summ)
 
 if __name__ == "__main__":
-	mul(10)
+	mul(13)
 
