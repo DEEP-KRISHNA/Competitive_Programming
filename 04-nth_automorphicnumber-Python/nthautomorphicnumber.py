@@ -40,7 +40,11 @@ def mul(num):
 		lst2.append(nu)
 		# summ = summ + (nu * int(nu / den))
 		nu = nu % den
-	print(lst1,lst2)
+	summ = 0
+	for i in range(lenn):
+		oth = lenn-1-i
+		summ = summ + (lst1[oth]*lst2[i]) * (10 ** oth)
+	print(summ)
 
 if __name__ == "__main__":
 	mul(9376)
