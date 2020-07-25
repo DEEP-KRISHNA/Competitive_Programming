@@ -12,17 +12,17 @@ def nthpowerfulnumber(n):
 	# Your code goes here
 	n = n + 1
 	i = 1
-	num = 1
+	num = 2
 	while (i < n):
 		lst = factors(num)
 		flag = True
-		for i in lst:
-			sq = i * i
-			print(num%sq)
+		for j in lst:
+			sq = j * j
 			if ((num % sq) != 0):
 				flag = False
 				break
 		if (flag):
+			print(num)
 			i = i + 1
 		num = num + 1
 	return num - 1		
