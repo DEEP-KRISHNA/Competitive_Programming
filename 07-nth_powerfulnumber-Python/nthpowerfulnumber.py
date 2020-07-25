@@ -18,7 +18,7 @@ def nthpowerfulnumber(n):
 		flag = True
 		for i in lst:
 			sq = i * i
-			print(num,sq)
+			print(num%sq)
 			if ((num % sq) != 0):
 				flag = False
 				break
