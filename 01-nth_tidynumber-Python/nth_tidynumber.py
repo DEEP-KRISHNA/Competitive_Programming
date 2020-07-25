@@ -8,4 +8,20 @@
 
 def fun_nth_tidynumber(n):
     # return 0
-    n = n+1
+    n = n + 1
+    i = 0
+    num = 1
+    while (i < n):
+        nu = str(num)
+        flag = True
+        for j in range(1, len(nu)):
+            if (int(nu[j]) < int(nu[j - 1])):
+                flag = False
+                break
+        if (flag):
+            i = i + 1
+        num += 1
+    return num - 1
+
+if __name__ == "__main__":
+    print(fun_nth_tidynumber(100))
