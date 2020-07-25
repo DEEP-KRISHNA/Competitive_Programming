@@ -5,3 +5,26 @@
 
 def fun_nth_uglynumber(n):
     return 0
+
+
+def factors(n):
+	lst = []
+	for i in range(2, int(math.sqrt(n)) + 1):
+	    flag = False
+	    while (n % i == 0):
+	        n = n / i
+	        flag = True
+	    if (flag == True):
+	        lst.append(i)
+	if (n >= 1):
+	    lst.append(int(n))
+	return lst
+
+def prime(num):
+    if (num <= 1):
+        return False
+	
+    for i in range(2, int(math.sqrt(num)) + 1):
+	    if (num % i == 0):
+	        return False
+    return True
