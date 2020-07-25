@@ -23,10 +23,13 @@ def nthautomorphicnumbers(n):
 		else:
 			i = maxkey
 			num = dic[maxkey] + 1
-		# while (i < n):
-		# 	nu = num
-		# 	for i in range(len(str(nu))):
-
+		while (i < n):
+			if (num == mul(num)):
+				i = i + 1
+				dic[i] = num
+				maxkey = i
+		num += 1
+	return num - 1
 
 def mul(nu):
 	# nu = num
@@ -49,5 +52,5 @@ def mul(nu):
 	return int(str(summ)[::-1][:lenn][::-1])
 
 if __name__ == "__main__":
-	print(mul(76))
+	print(nthautomorphicnumbers(28))
 
