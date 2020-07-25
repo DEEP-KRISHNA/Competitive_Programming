@@ -36,4 +36,4 @@ def prime(num):
     return True
 
 if __name__ == "__main__":
-	print(prime_factors(13))
+	print(prime_factors(11))
