@@ -20,5 +20,12 @@ def rec(x, ex):
 		rec(x[:i] + x[i + 1:], ex+x[i])
 
 if __name__ == "__main__":
-	print(getallpermutations("xyzab") == list(permutations("xzab", r=len("xzab"))))
-	# print()
+	lst = [
+            ("abc"), ("ab"), ("pqr"), ("pq")
+			       ]
+	for i in lst:
+		print(getallpermutations(i))
+		print(list(permutations(i, r=len(i))))
+		print(getallpermutations(i) == list(permutations(i, r=len(i))))
+	# print(getallpermutations(("abc")))
+	# # print()
