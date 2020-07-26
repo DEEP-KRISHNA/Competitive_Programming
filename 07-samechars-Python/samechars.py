@@ -7,4 +7,4 @@
 
 def samechars(s1, s2):
 	# Your code goes here
-	pass
+	return (s1 in s2) or (s2 in s1)
