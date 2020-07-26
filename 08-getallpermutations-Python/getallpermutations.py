@@ -10,6 +10,7 @@ lst = []
 def getallpermutations(x):
 	# Your code goes here
 	global lst
+	lst = []
 	rec(x,'')
 	return lst
 
@@ -26,6 +27,6 @@ if __name__ == "__main__":
 	for i in lst:
 		print(getallpermutations(i))
 		print(list(permutations(i, r=len(i))))
-		print(getallpermutations(i) == list(permutations(i, r=len(i))))
+		# print(getallpermutations(i) == list(permutations(i, r=len(i))))
 	# print(getallpermutations(("abc")))
 	# # print()
