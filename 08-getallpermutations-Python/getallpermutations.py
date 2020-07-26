@@ -4,4 +4,9 @@
 
 def getallpermutations(x):
 	# Your code goes here
-	pass
+	for i in range(len(x)):
+		print(x[i], x[:i] + x[i + 1:])
+
+
+if __name__ == "__main__":
+	getallpermutations("abcd")
