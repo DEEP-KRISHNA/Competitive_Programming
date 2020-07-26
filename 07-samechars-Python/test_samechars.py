@@ -5,7 +5,7 @@ import pytest
 
 
 @pytest.mark.parametrize('x, result',[
-	(("abcabcabc", "cba") , True),
+	(("abcabcabc", "cab") , True),
 	(("abcabcabc", "cbad") , False),
 	(("abcabcabc", "cBa") , False),
 	((42,"The other parameter is not a string") , False),
@@ -13,4 +13,4 @@ import pytest
 ])
 
 def test_samechars(x, result):
-    assert samechars(x) == result
+    assert samechars(x[0],x[1]) == result

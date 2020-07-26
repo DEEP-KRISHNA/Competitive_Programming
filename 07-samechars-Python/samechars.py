@@ -6,8 +6,19 @@
 # parameter is not a string, but returns True if both strings are empty (why?).
 
 def samechars(s1, s2):
+	s1 = str(s1)
+	s2 = str(s2)
 	# Your code goes here
 	return (s1 in s2) or (s2 in s1)
 
+
 if __name__ == "__main__":
-	print(samechars("abcabcabc", "cba"))
+	lst = [
+            (("abcabcabc", "cab"), True),
+            (("abcabcabc", "cbad"), False),
+            (("abcabcabc", "cBa"), False),
+            ((42, "The other parameter is not a string"), False),
+            (("", ""), True),
+        ]
+	for i in lst:
+		print(samechars(i[0][0],i[0][1]))
