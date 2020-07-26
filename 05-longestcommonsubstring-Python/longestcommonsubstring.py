@@ -28,9 +28,10 @@ def longestcommonsubstring(s1, s2):
                         flag = True
                     lst.append(temp)
             j = j + 1
+    if (len(lst) == 0):
+        return ""
     lst.sort()
-    print(lst)
-    pass
+    return lst[0]
 
 if __name__ == "__main__":
     longestcommonsubstring("abcABC", "zzabZZAB")
