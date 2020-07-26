@@ -7,4 +7,17 @@
 
 def nthlychrelnumbers(n):
 	# your code goes here
-	pass
+	num = 123
+	i = 0
+	while (i < n):
+		if (lycherel_check(num)):
+			i += 1
+		num += 1
+	return num - 1
+
+def lycherel_check(num):
+	for i in range(25):
+		pal = int(str(num)[::-1])
+		if (num == pal):
+			return False
+	return True
