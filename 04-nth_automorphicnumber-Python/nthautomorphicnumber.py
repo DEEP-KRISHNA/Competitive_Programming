@@ -15,10 +15,31 @@ def nthautomorphicnumbers(n):
 	global maxx
 	n = n - 1
 	if (n < maxx):
-		print(lst)
 		return lst[n]
 	else:
-		return "het=y"
+		newlst = []
+		pre = ['1','2','3','4','5','6','7','8','9']
+		for i in lst[-3:]:
+			for j in pre:
+				newnum = int(j + str(i))
+				if (newnum == mul(newnum)):
+					newlst.append(newnum)
+			for j in pre:
+				newnum = int(j + '0' + str(i))
+				if (newnum == mul(newnum)):
+					newlst.append(newnum)
+			for j in pre:
+				newnum = int(j + '00' + str(i))
+				if (newnum == mul(newnum)):
+					newlst.append(newnum)
+			if (newlst != []):
+				newlst.sort()
+				for j in newlst:
+					if(j not in lst):
+						lst.append(j)
+				lst.sort()
+		# print(lst)
+		return lst[n]
 
 def mul(nu):
 	# nu = num
@@ -41,7 +62,7 @@ def mul(nu):
 	return int(str(summ)[::-1][:lenn][::-1])
 
 if __name__ == "__main__":
-	lst = [
+	lstt = [
             (1, 0),
             (2, 1),
             (3, 5),
@@ -71,7 +92,7 @@ if __name__ == "__main__":
             (27, 259918212890625),
             (28, 740081787109376),
         ]
-	for i in lst:
+	for i in lstt:
 		print(nthautomorphicnumbers(i[0]))
 	# 	if (nthautomorphicnumbers(i[0]) != i[1]):
 	# 		print(i)
