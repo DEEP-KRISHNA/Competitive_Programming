@@ -6,29 +6,18 @@
 import math
 
 global lst
-lst = []
-global maxkey
-maxkey = 0
+lst = [0,1,5,6]
+global maxx
+maxx = 4
 
 def nthautomorphicnumbers(n):
-	global maxkey
 	global lst
-	if (n <= maxkey):
-		return lst[n-1]
+	global maxx
+	n = n - 1
+	if (n < maxx):
+		return lst[n]
 	else:
-		# if (maxkey < 5):
-		# 	lst = []
-		# 	i = 0
-		# 	num = 0
-		# 	while (i < n):
-		# 		if (num == mul(num)):
-		# 			i = i + 1
-		# 			lst.append(num)
-		# 			maxkey = i
-		# 		num += 1
-		# 	return num - 1
-		# else:
-		return "hey"
+		return "het=y"
 
 def mul(nu):
 	# nu = num
