@@ -5,31 +5,30 @@
 
 import math
 
-global dic
-dic = {}
+global lst
+lst = []
 global maxkey
 maxkey = 0
 
 def nthautomorphicnumbers(n):
 	global maxkey
-	global dic
-	n = n + 1
+	global lst
 	if (n <= maxkey):
-		return dic[n]
+		return lst[n-1]
 	else:
-		if (maxkey == 0):
-			i = 0
-			num = 1
-		else:
-			i = maxkey
-			num = dic[maxkey] + 1
-		while (i < n):
-			if (num == mul(num)):
-				i = i + 1
-				dic[i] = num
-				maxkey = i
-		num += 1
-	return num - 1
+		# if (maxkey < 5):
+		# 	lst = []
+		# 	i = 0
+		# 	num = 0
+		# 	while (i < n):
+		# 		if (num == mul(num)):
+		# 			i = i + 1
+		# 			lst.append(num)
+		# 			maxkey = i
+		# 		num += 1
+		# 	return num - 1
+		# else:
+		return "hey"
 
 def mul(nu):
 	# nu = num
@@ -52,6 +51,42 @@ def mul(nu):
 	return int(str(summ)[::-1][:lenn][::-1])
 
 if __name__ == "__main__":
-	print(nthautomorphicnumbers(28))
+	print(nthautomorphicnumbers(13))
+	print(nthautomorphicnumbers(12))
+	lst = [
+            (1, 0),
+            (2, 1),
+            (3, 5),
+            (4, 6),
+            (5, 25),
+            (6, 76),
+            (7, 376),
+            (8, 625),
+            (9, 9376),
+            (10, 90625),
+            (11, 109376),
+            (12, 890625),
+            (13, 2890625),
+            (14, 7109376),
+            (15, 12890625),
+            (16, 87109376),
+            (17, 212890625),
+            (18, 787109376),
+            (19, 1787109376),
+            (20, 8212890625),
+            (21, 18212890625),
+            (22, 81787109376),
+            (23, 918212890625),
+            (24, 9918212890625),
+            (25, 40081787109376),
+            (26, 59918212890625),
+            (27, 259918212890625),
+            (28, 740081787109376),
+        ]
+	for i in lst:
+		print(nthautomorphicnumbers(i[0]))
+	# 	if (nthautomorphicnumbers(i[0]) != i[1]):
+	# 		print(i)
+	# print("done")
 	# print(mul(9))
 
