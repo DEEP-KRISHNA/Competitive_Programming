@@ -8,3 +8,6 @@
 def samechars(s1, s2):
 	# Your code goes here
 	return (s1 in s2) or (s2 in s1)
+
+if __name__ == "__main__":
+	print(samechars("abcabcabc", "cba"))
