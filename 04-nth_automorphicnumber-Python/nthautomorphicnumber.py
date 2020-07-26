@@ -97,5 +97,4 @@ if __name__ == "__main__":
 		if (nthautomorphicnumbers(i[0]) != i[1]):
 			print(i)
 	print("done")
-	print(mul(9))
 
