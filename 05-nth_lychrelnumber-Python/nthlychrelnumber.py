@@ -20,4 +20,8 @@ def lycherel_check(num):
 		pal = int(str(num)[::-1])
 		if (num == pal):
 			return False
+		num = num + pal
 	return True
+
+if __name__ == "__main__":
+	print(nthlychrelnumbers(45))
