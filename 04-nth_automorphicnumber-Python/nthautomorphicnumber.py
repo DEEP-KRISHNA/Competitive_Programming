@@ -15,6 +15,7 @@ def nthautomorphicnumbers(n):
 	global maxx
 	n = n - 1
 	if (n < maxx):
+		print(lst)
 		return lst[n]
 	else:
 		return "het=y"
@@ -40,8 +41,6 @@ def mul(nu):
 	return int(str(summ)[::-1][:lenn][::-1])
 
 if __name__ == "__main__":
-	print(nthautomorphicnumbers(13))
-	print(nthautomorphicnumbers(12))
 	lst = [
             (1, 0),
             (2, 1),
