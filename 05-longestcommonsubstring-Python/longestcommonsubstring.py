@@ -28,6 +28,7 @@ def longestcommonsubstring(s1, s2):
                         flag = True
                     lst.append(temp)
             j = j + 1
+    lst.sort()
     print(lst)
     pass
 
