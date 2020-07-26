@@ -93,9 +93,9 @@ if __name__ == "__main__":
             (28, 740081787109376),
         ]
 	for i in lstt:
-		print(nthautomorphicnumbers(i[0]))
-	# 	if (nthautomorphicnumbers(i[0]) != i[1]):
-	# 		print(i)
-	# print("done")
-	# print(mul(9))
+		# print(nthautomorphicnumbers(i[0]))
+		if (nthautomorphicnumbers(i[0]) != i[1]):
+			print(i)
+	print("done")
+	print(mul(9))
 
