@@ -8,5 +8,27 @@
 # if s does not contain any alphabetic characters, the result should be the empty string ("")
 
 def leastfrequentletters(s):
+	s = s.lower()
+	dic = {}
+	for i in s:
+		if ((ord(i) >= 97) and (ord(i) <= 122)):
+			if (i in dic):
+				dic[i] += 1
+			else:
+				dic[i] = 1
+	print(dic)
+	lst = list(dic.values())
+	if (len(lst) == 0):
+		return ""
+	lst.sort()
+	retlst = []
+	for i in dic:
+		if (dic[i] == lst[0]):
+			retlst.append(i)
+	retlst.sort()
+	return (''.join(retlst))
 	# Your code goes here
-	pass
+
+
+if __name__ == "__main__":
+	leastfrequentletters("aDq efQ? FB'daf!!!".upper())
